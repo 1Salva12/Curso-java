@@ -1,0 +1,49 @@
+public class EjemploCadenas {
+    public static void main(String[] args) {
+        // 1. Declaración e inicialización de cadenas
+        String saludo = "Hola, mundo!";
+        String nombre = "Juan Pérez";
+        String vacio = "";
+        String nulo = null;
+        
+        // 2. Concatenación de cadenas
+        String mensaje = saludo + " Mi nombre es " + nombre;
+        System.out.println(mensaje);
+        
+        // 3. Longitud de una cadena
+        System.out.println("Longitud del mensaje: " + mensaje.length());
+        
+        // 4. Comparación de cadenas
+        String str1 = "Java";
+        String str2 = "java";
+        System.out.println("¿Son iguales? " + str1.equals(str2)); // false (case sensitive)
+        System.out.println("¿Son iguales ignorando mayúsculas? " + str1.equalsIgnoreCase(str2)); // true
+        
+        // 5. Extraer subcadenas
+        String subcadena = nombre.substring(5); // "Pérez"
+        System.out.println("Subcadena: " + subcadena);
+        
+        // 6. Búsqueda en cadenas
+        int indice = nombre.indexOf("Pérez"); // 5
+        System.out.println("'Pérez' empieza en el índice: " + indice);
+        
+        // 7. Reemplazo de texto
+        String nuevoMensaje = mensaje.replace("mundo", "amigo");
+        System.out.println(nuevoMensaje);
+        
+        // 8. División de cadenas
+        String[] partes = nombre.split(" ");
+        System.out.println("Nombre dividido:");
+        for (String parte : partes) {
+            System.out.println(parte);
+        }
+        
+        // 9. Convertir a mayúsculas/minúsculas
+        System.out.println("Mayúsculas: " + nombre.toUpperCase());
+        System.out.println("Minúsculas: " + nombre.toLowerCase());
+        
+        // 10. Eliminar espacios en blanco
+        String conEspacios = "   Hola   ";
+        System.out.println("Sin espacios: '" + conEspacios.trim() + "'");
+    }
+}
